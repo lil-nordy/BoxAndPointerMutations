@@ -160,7 +160,7 @@ def main():
     y = 'hello'
     print()
     print('T or F: "hello" is "hello"?', x is y)
-    # TODO: Ask: What the hell? 
+    # TODO: Ask: What the hell?
     print('T or F: "hello" == "hello"?', x == y)
 
     x = 1 * x
