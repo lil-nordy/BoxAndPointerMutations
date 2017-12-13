@@ -168,15 +168,54 @@ def main():
     print()
     print('T or F: (1 * "hello") is (1 * "hello"?', x is y)
     print('T or F: (1 * "hello") == (1 * "hello"?', x == y)
+    print('x, then y:', x, y)
 
     x = 2 * x
     y = 2 * y
     print()
     print('T or F: (2 * "hello") is (2 * "hello"?', x is y)
     print('T or F: (2 * "hello") == (2 * "hello"?', x == y)
-
+    print('x, then y:', x, y)
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
 main()
+
+'''
+# My question to fisher: 
+# Why does the first print statement evaluate to True? The variable name x doesn’t seem (to me) to point to the same string instance with value <h e l l o>. I understand why x == y, since their string instances have the same value of <h e l l o>. What is happening in memory? Is there something in Python that just doesn’t bother making another instance of a string if a string with its same value already exists? Does it create a pointer without asking you? 
+# 
+# #CODE BLOCK 1# 
+# print('Finally, a tricky one that your instruction will explain:')
+# x = 'hello'
+# y = 'hello'
+# print()
+# print('T or F: "hello" is "hello"?', x is y)
+# # TODO: Ask: Why?? 
+# print('T or F: "hello" == "hello"?', x == y)
+# >>>T or F: "hello" is "hello"? True #***Why???***
+# >>>T or F: "hello" == "hello"? True
+# 
+# Similarly, why would binary operations affect the IS evaluation? Why does x IS y evaluate to TRUE in Code Block 2, but not in Code Block 3? (I understand why they wouldn’t have an effect on the == evaluation; if the same operation is applied to both strings, they would have the same value.) 
+# 
+# #CODE BLOCK 2 # 
+# x = 1 * x
+# y = 1 * y
+# print()
+# print('T or F: (1 * "hello") is (1 * "hello"?', x is y)
+# print('T or F: (1 * "hello") == (1 * "hello"?', x == y)
+# >>> T or F: (1 * "hello") is (1 * "hello"? True
+# >>>T or F: (1 * "hello") == (1 * "hello"? True
+# 
+# #CODE BLOCK 3 # 
+# x = 2 * x
+# y = 2 * y
+# print()
+# print('T or F: (2 * "hello") is (2 * "hello"?', x is y)
+# print('T or F: (2 * "hello") == (2 * "hello"?', x == y)
+# >>> T or F: (2 * "hello") is (2 * "hello"? False
+# >>> T or F: (2 * "hello") == (2 * "hello"? True
+
+ 
+'''
