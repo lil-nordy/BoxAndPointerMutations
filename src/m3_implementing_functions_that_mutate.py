@@ -41,6 +41,7 @@ def run_test_swap_colors():
     rectangle = rg.Rectangle(rg.Point(200, 30), rg.Point(350, 150))
     rectangle.fill_color = 'green'
 
+    # >Note: Take notice of the clever way that he breaks up this string; it's easier to read.
     expected_c = 'Circle: center=(100, 150), radius=50,'
     expected_c += ' fill_color=green, outline_color=black,'
     expected_c += ' outline_thickness=1.'
@@ -88,10 +89,16 @@ def run_test_swap_colors():
     rectangle.fill_color = 'red'
     rectangle.attach_to(window)
 
+    # >Note: take note of the new RoseGraphics object class that was introduced just now to display messages. Pretty
+    # cool.
     msg1 = 'At this point, the circle should be filled with BLACK\n'
     msg1 += 'and the rectangle should be filled with RED'
     message = rg.Text(rg.Point(400, 100), msg1)
     message.attach_to(window)
+
+    msg42 = 'Whazzzzupppp'
+    my_message = rg.Text(rg.Point(600, 300), msg42)
+    my_message.attach_to(window)
 
     # At this point, the CIRCLE should be filled with BLACK
     #                   and the RECTANGLE filled with RED.
@@ -101,7 +108,7 @@ def run_test_swap_colors():
     swap_colors(circle, rectangle)
 
     # At this point, the CIRCLE should be filled with RED
-    #                   and the RECTANGLE filled with BLACK.
+    #           and the RECTANGLE filled with BLACK.
     msg2 = 'Now, the circle should be filled with RED\n'
     msg2 += 'and the rectangle should be filled with BLACK.\n'
     msg2 += 'If so, and if nothing else changed,\n'
@@ -134,7 +141,7 @@ def swap_colors(circle, rectangle):
       :type rectangle: rg.Rectangle
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ####################################################################
@@ -145,7 +152,11 @@ def swap_colors(circle, rectangle):
     #      B = temp
     ####################################################################
     # ------------------------------------------------------------------
-
+    new_r_color = circle.fill_color
+    new_c_color = rectangle.fill_color
+    circle.fill_color = new_c_color
+    rectangle.fill_color = new_r_color
+    # Todo: Ask how to use the template that you totally didn't just use.
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
