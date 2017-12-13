@@ -90,6 +90,8 @@ def main():
     print('Before:', point, point2)
     point2.x = 100
     print('After: ', point, point2)  # Note that  point.x  ALSO changed
+    #> NOTE: point2.x AND point2.y changed! This is because point2.x IS point.x, and point.x was reassigned via
+    # mutation.
 
     # ------------------------------------------------------------------
     # 4. Re-assigns the   point   variable to refer to another rg.Point.
@@ -100,10 +102,10 @@ def main():
 
     print('Before:', point, point2)
     point = rg.Point(10, 6)
-    print(point, point2)  # Prints the two DIFFERENT rg.Points
+    print('Umm...After re-assignment:?', point, point2)  # Prints the two DIFFERENT rg.Points
 
     # ------------------------------------------------------------------
-    # 5. Shows the difference betwee the   is   operator
+    # 5. Shows the difference between the   is   operator
     #      (two things refer to the same place in memory)
     #    and the   ==   operator (two things contain the same data).
     # ------------------------------------------------------------------
@@ -158,6 +160,7 @@ def main():
     y = 'hello'
     print()
     print('T or F: "hello" is "hello"?', x is y)
+    # TODO: Ask: What the hell? 
     print('T or F: "hello" == "hello"?', x == y)
 
     x = 1 * x
