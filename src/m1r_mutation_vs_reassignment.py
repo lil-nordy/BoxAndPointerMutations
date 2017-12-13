@@ -4,8 +4,8 @@ This module demonstrates the distinction betweeen:
   -- RE-ASSIGNING the name BLAH to refer to a different object.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Nathaniel Nordquist.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -17,12 +17,13 @@ import rosegraphics as rg
 
 def main():
     """ Runs several examples. """
-#     example1()
-#     example2()
+    example1()
+    example2()
 
 
 # ----------------------------------------------------------------------
-# TODO: 2.
+''' DIRECTIVES: 
+# DONE: 2.
 #  Step a:  READ the code in  example1.
 #
 #  Step b:  PREDICT what  example1  will print when it runs.
@@ -35,6 +36,7 @@ def main():
 #
 #  Step e:  When you believe that you understand the code in example1,
 #           change the above TO DO to DONE.
+'''
 # ----------------------------------------------------------------------
 
 def example1():
@@ -60,6 +62,7 @@ def example1():
     print('After: ', point2)
 
 
+''' DIRECTIVES: 
 # ----------------------------------------------------------------------
 # TODO: 3.
 #  Step a:  READ the code in  example2.
@@ -79,6 +82,8 @@ def example1():
 #  Step e:  When you believe that you understand the code in example2,
 #           change the above TO DO to DONE.
 # ----------------------------------------------------------------------
+'''
+
 
 def example2():
     print()
