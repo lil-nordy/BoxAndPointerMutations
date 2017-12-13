@@ -39,6 +39,7 @@ def main():
 '''
 # ----------------------------------------------------------------------
 
+
 def example1():
     print()
     print('Demonstrating mutation vs re-assignment:')
