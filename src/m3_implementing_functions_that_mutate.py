@@ -153,10 +153,14 @@ def swap_colors(circle, rectangle):
     ####################################################################
     # ------------------------------------------------------------------
     new_r_color = circle.fill_color
-    new_c_color = rectangle.fill_color
-    circle.fill_color = new_c_color
+    circle.fill_color = rectangle.fill_color
     rectangle.fill_color = new_r_color
-    # Todo: Ask how to use the template that you totally didn't just use.
+    # DONE: Ask how to use the template that you totally didn't just use. DONE via a clever GIST
+    # Below was my first attempt that used an unecessary line for clarification
+    # new_r_color = circle.fill_color
+    # new_c_color = rectangle.fill_color
+    # circle.fill_color = new_c_color
+    # rectangle.fill_color = new_r_color
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
