@@ -18,7 +18,7 @@ import rosegraphics as rg
 ########################################################################
 
 # ----------------------------------------------------------------------
-# TODO: 2.
+# DONE: 2.
 #  Step a:  READ the   mutate_point   function below.
 #
 #  Step b:  Note that the code in main has 5 parts numbered 1, 2, ... 5.
@@ -90,7 +90,7 @@ def main():
     print('Before:', point, point2)
     point2.x = 100
     print('After: ', point, point2)  # Note that  point.x  ALSO changed
-    #> NOTE: point2.x AND point2.y changed! This is because point2.x IS point.x, and point.x was reassigned via
+    # > NOTE: point2.x AND point2.y changed! This is because point2.x IS point.x, and point.x was reassigned via
     # mutation.
 
     # ------------------------------------------------------------------
@@ -160,7 +160,7 @@ def main():
     y = 'hello'
     print()
     print('T or F: "hello" is "hello"?', x is y)
-    # TODO: Ask: What the hell?
+    # DONE: Ask: What the hell?
     print('T or F: "hello" == "hello"?', x == y)
 
     x = 1 * x
